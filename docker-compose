@@ -1,0 +1,11 @@
+version: '2'
+services:
+ nginx:
+  build: .
+  image: registry.mydomain.com:5000/pikado/alpine-nginx:1.2.3
+  container_name: alpine_nginx_cont
+  hostname: alpine-nginx-cont
+  ports:
+  - "80"
+  - "443"
+  restart: always
